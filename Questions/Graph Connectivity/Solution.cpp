@@ -31,15 +31,26 @@ int main() {
 	int t;
 	cin>>t;
     cin.ignore();
+    char n;
+	cin>>n;
+    char old_n = '\0';
     
 	for(int i=0;i<t;i++)  //solving test cases and finding result for each
 	{
-	    char n;
-	    cin>>n;
+	    if(old_n != '\0'){
+	        n = old_n;
+	    }
+	    
 	    set<int> graph[(int)(n-'A')+1]; 
 	    bool visited[(int)(n-'A')+1] = {false};
 	    string edge;
+	    
 	    while(cin>>edge){
+	        if(edge.size() == 1)
+	        {
+	            old_n = edge[0];
+	            break;
+	        }
 	        graph[(int)(edge[0]-'A')].insert((int)(edge[1]-'A'));
 	        graph[(int)(edge[1]-'A')].insert((int)(edge[0]-'A'));
 	    }
