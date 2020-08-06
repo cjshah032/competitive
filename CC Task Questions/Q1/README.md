@@ -1,4 +1,4 @@
-####Input Format:
+Input Format:
 
 First line contains two integers n and k. n lines follow. Each line has two space separated integers representing the x and y coordinates of the points.
 
