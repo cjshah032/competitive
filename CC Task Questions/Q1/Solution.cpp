@@ -90,14 +90,15 @@ int main() {
 	// your code goes here
 	ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    //sample input. Modify accordingly
+    int n, k;
+    cin>>n>>k;
     vector<pair<int, int>> points;
-    points.pb(mp(1,2));
-    points.pb(mp(2,3));
-    points.pb(mp(9,2));
-    points.pb(mp(7,6));
-    //calling function
-    float result = MiniMaxDist(points, 4, 2);
+	for(int i=0; i<n; i++)
+	{
+		int a,b;
+		points.pb(mp(a, b));
+	}
+    float result = MiniMaxDist(points, n, k);
     cout<<result;
 	return 0;
 }
